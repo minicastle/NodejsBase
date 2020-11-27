@@ -30,12 +30,11 @@ var app = http.createServer(function(request,response){
 
     function templateList(filelist){
       let list = `<ul>`;
-          for(let i = 0; i<filelist.length; i++){
-            list = list+`<li><a href = "/?id=${filelist[i]}">${filelist[i]}</a></li>`
-          }
-          list = list+`</ul>`;
-
-          return list;
+        for(let i = 0; i< filelist.length ; i++){
+          list = list+`<li><a href = "/?id=${filelist[i]}">${filelist[i]}</a></li>`
+        }
+      list = list+`</ul>`;
+      return list;
     }
 
     if(pathname === "/"){
